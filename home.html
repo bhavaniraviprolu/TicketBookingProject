@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+    <script src="./index.js" type="text/javascript"></script>
+</head>
+<body>           
+    <centre><h2>Book My Ticket</h2></centre>  
+    <div class="grid">
+        <div id="item1"><img src="./flightlogo.jpg" height="50px" width="80px"/><br>Flights</div>
+        <div id="item2"><img src="./hotel-icon.jpg" height="50px" width="80px"/><br>Hotels</div>
+        <div id="item3"><img src="./train.png" height="50px" width="80px"/><br>Trains</div>
+        <div id="item4"><img src="./bus.jpg" height="50px" width="80px"/><br>Busses</div>
+        <div id="item5"><img src="./car.png" height="50px" width="80px"/><br>Cars</div>
+    </div>         
+    <form id="form1" name="form1" class="class1" action="./nextpage.html" method="post" onsubmit="validateForm1();">
+
+               
+        <input type="radio" id="oneway" name="trip" onclick="disablereturn()">Oneway</input>
+        <input type="radio" id="roundtrip" name="trip" onclick="enablereturn()">RoundTrip</input>
+        <hr>
+                         
+        <select name="from" id="from">
+            <option value="">Select From</option>
+            <option value="melbourne">Melbourne</option>
+            <option value="sydney">Sydney</option>
+            <option value="Dusseldorf">Dusseldorf</option>
+        </select>
+        <select name="to" id="to">
+            <option value="">Select To</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="hyderabad">Hyderabad</option>
+            <option value="newdelhi">New Delhi</option>
+        </select> 
+        <br>
+           <span class="error" id="errorname1"></span> 
+           <span class="error" id="errorname2"></span>
+        <br>
+        <br>
+               
+        <label for="depart" name="c">Depart</label>
+        <input type="date" id="depart" name="depart" onchange="setReturnMin();" />             
+           <span class="error" id="errorname3"></span>
+        <br> 
+        <label for="return" name="d">Return</label>
+        <input type="date" id="return" name="return" disabled="true"/>
+            <span class="error" id="errorname4"></span>
+        <br>
+               
+        <label for="flight" name="e">Flight</label>
+        <select id="selflight" name="selflight">
+            <option value="">Select Flight</option>
+            <option value="jetstar">Jetstar</option>
+            <option value="quantas">Quantas</option>
+            <option value="rex">Rex Airlines</option>
+        </select>
+            <span class="error" id="errorname5"></span>
+        <br>
+        <label for="class" name="f">Class</label>
+        <select id="class" name="class">
+            <option value="">Select Class</option>
+            <option value="economy">Economy</option>
+            <option value="business">Business</option>
+            <option value="firstclass">First Class</option>
+        </select>
+            <span class="error" id="errorname6"></span>
+        <br>          
+        <button id="btn_book" name="btn_book" onclick="validateForm1();">Book</button>
+
+    </form>   
+    
+    <script>
+      var dtToday = new Date();
+      var month = dtToday.getMonth() + 1;
+      var day = dtToday.getDate();
+      var year = dtToday.getUTCFullYear();
+      if(month < 10)
+        month = '0' + month.toString();
+      if(day < 10)
+        day = '0' + day.toString();
+    
+       var minDate = year + '-' + month + '-' + day;
+       document.getElementById("depart").setAttribute('min',minDate);
+       
+      /*set returnDate min */
+
+       function setReturnMin(e) {
+        let returnDate = document.getElementById('depart').value;
+        document.getElementById('return').setAttribute('min', returnDate);
+       }
+   </script>
+</body>
+</html>

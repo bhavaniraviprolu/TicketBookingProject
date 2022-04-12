@@ -1,0 +1,138 @@
+body {
+    font-family: serif;
+    font-size: large;
+    font-style:initial;
+    color: white;
+    background-color: rgb(12, 181, 228);
+    height: 700px;
+    width: 100%;
+    text-align: left;
+  }
+  .grid{
+      display: grid;
+      grid-template-rows: 1;
+      grid-template-columns: 2;
+  }
+  #bookingform{
+      grid-row: 1;
+      grid-column: 1;
+  }
+  .image{
+      grid-row: 1;
+      grid-column: 2;
+      margin-top: 20px;
+      color: #000;
+  }
+  
+.class2{
+    border: 0px solid rgb(94, 90, 90);
+    color: black;
+    height: 700px;
+    width: 600px;
+    align-self: center;
+    margin: 0px 10px 10px 10px;
+    
+
+}
+
+.class2 input{
+    box-sizing: border-box;
+    font-size: 0.8em;
+    width: 300px;
+    padding: 1px;
+    margin-left: 120px;
+    margin-bottom: 5px;
+    
+    
+  }
+
+  select{
+    border-radius: 2px;
+    border: 2px solid #777;
+    box-sizing: border-box;
+    font-size: 0.8em;
+    font-family: 'Nanum Gothic';
+    width: 300px;
+    padding: 1px;
+    margin-left: 120px;
+    margin-bottom: 5px;
+  }
+
+  textarea{
+    border-radius: 2px;
+    border: 2px solid #777;
+    box-sizing: border-box;
+    font-size: 0.8em;
+    font-family: 'Nanum Gothic';
+    width: 300px;
+    height: 100px;
+    padding: 0px;
+    margin-left:120px;
+    margin-bottom: 5px;
+  } 
+
+   
+#age1, #age2, #age3{
+    border-radius: 2px;
+    border: 2px solid #777;
+    box-sizing: border-box;
+    font-size: 0.8em;
+    width: 40px;
+    padding: 1px;
+    margin-left: 5px;
+}
+.age{
+    margin-left: 20px;;
+}
+#male1, #male2, #male3{
+    width:auto;
+    margin-left: 120px;
+}
+#female1, #female2, #female3{
+    width:auto;
+    margin-left: 10px;
+}
+.class2 h2{
+    margin-top: 20px;
+    margin-left: 120px;
+}  
+
+button {
+    height: 40px;
+    width: 80px;
+    background: rgb(210, 210, 41);
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 160px;
+    margin-top:20px;
+  }
+  
+button:hover {
+    border: 2px solid black;
+}
+
+label{
+      
+      margin-left: 120px;
+}
+
+.error{
+    background-color: yellow;
+    color: #D8000C;
+    font-size:medium;
+    margin-left: 5px;
+}
+.errorgender{
+    background-color: yellow;
+    color: #D8000C;
+    font-size:medium;   
+    margin-left: 120px;
+}
+.errorage{
+    background-color: yellow;
+    color: #D8000C;
+    font-size:medium;
+    margin-left: 200px;
+}
