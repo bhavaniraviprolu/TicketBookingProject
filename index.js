@@ -211,41 +211,40 @@ const bookingformvalidation = function () {
        document.getElementById('errorage3').innerHTML="";
     }
     
+
     /*email number*/
+
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+
     if (email.value == ""){ 
         document.getElementById('errorname4').innerHTML="Enter EmailId";  
         email.focus(); 
         return false; 
     }
+    else if(!email.value.match(mailformat))
+    {
+        document.getElementById('errorname4').innerHTML="Sholud be in mail format";
+        email.focus();
+        return false;    
+    }
     else
     {
-        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
-        if(email.value.match(mailformat))
-        {
-            document.getElementById('errorname4').innerHTML="";
-        }
-        else
-        {
-            document.getElementById('errorname4').innerHTML="Sholud be in mail format";
-            return false;
-        }
-        
-    }
+        document.getElementById('errorname4').innerHTML="";
     
+    }
+
+    console.log(mobile.value.length);
     
     /*contact number*/
     if (mobile.value == ""){ 
         document.getElementById('errorname5').innerHTML="Enter Mobile#";  
+        mobile.focus();
         return false; 
-    }
-    else if (typeof mobile.value !== "number" && mobile.value.length !== 10){
-        document.getElementById('errorname5').innerHTML="# Should be 10 digits";  
-        return false; 
-           
     }
     else{
         document.getElementById('errorname5').innerHTML="";
     }
+
     /*address*/
     if (address.value == ""){ 
         document.getElementById('errorname6').innerHTML="Enter Address";  
@@ -260,6 +259,7 @@ const bookingformvalidation = function () {
     if (food_preference.value == ""){ 
         
         document.getElementById('errorname7').innerHTML="Select Food";  
+        food_preference.focus();
         return false; 
     }
     else{
@@ -269,6 +269,7 @@ const bookingformvalidation = function () {
     /*Payment*/
     if (payment_selection.value == ""){ 
         document.getElementById('errorname8').innerHTML="Select Payment";
+        payment_selection.focus();
         return false; 
     }
     else{
@@ -278,7 +279,8 @@ const bookingformvalidation = function () {
     var data = `Passenger1:${passenger1.value}   Passenger2:${passenger2.value}   Child:${child.value}   Email:${email.value}  Mobile#:${mobile.value}`
     
    const data2 = localStorage.getItem("storageName");
-    
-    window.alert(`Congrats Your ticket has been booked  ${data2}  ${data}`);
+  
+ 
+   window.alert(`Congrats Your ticket has been booked  ${data2}  ${data}`);
 } 
 

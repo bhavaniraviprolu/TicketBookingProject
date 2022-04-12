@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="grid">
-    <form id="bookingform" class="class2" Action="" method="get" onsubmit="bookingformvalidation();">
+    <form id="bookingform" class="class2" Action="" method="post" onsubmit="bookingformvalidation();">
         
      <h2>Traveller Details</h2>
      <hr>
@@ -63,7 +63,7 @@
      <br>
      <label for="mobile" name="mo">Contact Number</label>
      <br>
-     <input type="text" name="mobile" id="mobile" placeholder="#mobile"/>
+     <input type="number" name="mobile" id="mobile" placeholder="#mobile" required/>
          <span class="error" id="errorname5"></span>
      <br>
      <label for="address" name="ad">Address</label>
@@ -100,6 +100,6 @@
         <img src="./air_india.webp" height="600" width="800"/>
     </div>
 </div>
-    
+
 </body>
 </html>

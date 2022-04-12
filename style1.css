@@ -10,6 +10,10 @@ body {
     width: 100%;
     
   }
+  #generationimg{
+    margin-top: 20px;
+    margin-left: 100px;
+  }
   
   .grid{
     display: grid;
