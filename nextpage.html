@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="grid">
-    <form id="bookingform" class="class2" Action="" method="post" onsubmit="bookingformvalidation();">
+    <form id="bookingform" class="class2" Action="index.html" method="get" onsubmit="bookingformvalidation();">
         
      <h2>Traveller Details</h2>
      <hr>
@@ -68,12 +68,12 @@
      <br>
      <label for="address" name="ad">Address</label>
      <br>
-     <textarea type="textarea" name="address" id="address" placeholder="Enter Address"></textarea>
+     <textarea type="textarea" name="address" id="address" placeholder="Enter Address" required></textarea>
          <span class="error" id="errorname6"></span>
      <br>
      <label for="food_preference" name="fd">Select Food Preference</label>
      <br>
-     <select id="food_preference" name="food_preference">
+     <select id="food_preference" name="food_preference" required>
         <option value="">Choose a Food preference from the List</option>
         <option value="nopreference">No preference</option>
         <option value="vegan">Vegan</option>
@@ -83,7 +83,7 @@
      <br>
      <label for="payment_selection" name="py">Select Payment Option</label>
      <br>
-     <select id="payment_selection" name="payment_selection">
+     <select id="payment_selection" name="payment_selection" required>
         <option value="">Choose a payment option from the List</option>
         <option value="paypal">Paypal</option>
         <option value="card">Card</option>

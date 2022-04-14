@@ -223,7 +223,7 @@ const bookingformvalidation = function () {
     }
     else if(!email.value.match(mailformat))
     {
-        document.getElementById('errorname4').innerHTML="Sholud be in mail format";
+        document.getElementById('errorname4').innerHTML="Should be in mail format";
         email.focus();
         return false;    
     }
